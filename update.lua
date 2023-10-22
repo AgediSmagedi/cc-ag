@@ -1,5 +1,5 @@
 print("data will be erased! continue?(y/n)/")
-if read() == y then
+if read() == "y" then
 
 print("starting update...")
 fs.delete("agedi")
