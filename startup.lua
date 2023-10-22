@@ -1,4 +1,4 @@
-gpassword = "cheese"
+password = "cheese"
 signedin = false
 
 ag = require("agedi/ag")
