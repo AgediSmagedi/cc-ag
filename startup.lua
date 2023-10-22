@@ -1,7 +1,7 @@
-password = "cheese"
+gpassword = "cheese"
 signedin = false
 
-ag = require("ag")
+ag = require("agedi/ag")
 ag.clear("-- welcome --")
 
 
