@@ -1,8 +1,8 @@
-print("starting install...")
+rint("starting install...")
 
 --gotta remove update file if its there
-local isUpdate = fs.open("update", "w")
-if isUpdate ~= nil then
+local isUpdate = fs.exists("update", "w")
+if isUpdate then
     fs.delete("update")
 end
 local agUrl = "https://raw.githubusercontent.com/AgediSmagedi/cc-ag/main/ag.lua"
@@ -29,4 +29,10 @@ text = http.get(startUrl).readAll()
 startup.write(text)
 startup.close()
 
+local isconfig = fs.exists("agediconfig", "r")
+if not isconfig then
+local config = fs.open("agediconfig", "r")
+print("enter password/")
+config.writeLine(read())
+end
 print("Done!")
