@@ -1,4 +1,7 @@
-password = "cheese"
+config = fs.open("agediconfig", "r")
+config.seek(0)
+password = config.readLine()
+config.close()
 signedin = false
 
 ag = require("agedi/ag")
