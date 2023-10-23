@@ -24,11 +24,16 @@ local function InTable(table, item)
     end
 end
 
+local function split(string, delimiter)
+    t = {}
+    for str in string.gmatch(string, "([^" ..delimiter.."]+)") do
+        table.insert(t,str)
+    end
+    return t
+end
 
-local test = {[1] = "hi", [2] = "wassup", ["yes"] = "yes"}
-local bool, index = InTable(test, "yes")
-print(index)
 return{
     clear = clear,
-    InTable = InTable
+    InTable = InTable,
+    split = split
 }
